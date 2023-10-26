@@ -17,20 +17,28 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>30</y>
-      <width>381</width>
-      <height>201</height>
+      <x>10</x>
+      <y>10</y>
+      <width>291</width>
+      <height>131</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <bold>true</bold>
-     </font>
-    </property>
     <property name="title">
-     <string>Bienvenido</string>
+     <string>Bienvenida</string>
     </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ingrese su nombre:</string>
+     </property>
+    </widget>
     <widget class="QLineEdit" name="name">
      <property name="geometry">
       <rect>
@@ -51,61 +59,25 @@
       </rect>
      </property>
     </widget>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>121</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Ingrese su nombre:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>60</y>
-       <width>111</width>
+       <width>101</width>
        <height>16</height>
       </rect>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Ingrese su edad:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>150</x>
-       <y>90</y>
-       <width>80</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Saludar</string>
-     </property>
-    </widget>
-    <widget class="QListWidget" name="list_bienvenida">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>150</y>
-       <width>256</width>
-       <height>41</height>
-      </rect>
+      <string>Ingrese su edad:</string>
      </property>
     </widget>
     <widget class="QComboBox" name="comboBox_ocupacion">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>120</y>
-       <width>221</width>
+       <x>10</x>
+       <y>90</y>
+       <width>231</width>
        <height>23</height>
       </rect>
      </property>
@@ -121,17 +93,17 @@
      </item>
      <item>
       <property name="text">
-       <string>Fisico</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
        <string>Medico</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Ingeniero</string>
+       <string>Fisico</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Estudiante</string>
       </property>
      </item>
      <item>
@@ -144,16 +116,16 @@
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>240</y>
-      <width>151</width>
-      <height>101</height>
+      <x>10</x>
+      <y>150</y>
+      <width>291</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="title">
      <string>Genero</string>
     </property>
-    <widget class="QRadioButton" name="radioMasculino">
+    <widget class="QRadioButton" name="radioButton_masculino">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -166,11 +138,11 @@
       <string>Masculino</string>
      </property>
     </widget>
-    <widget class="QRadioButton" name="radioFemenino">
+    <widget class="QRadioButton" name="radioButton_femenino">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>50</y>
+       <x>100</x>
+       <y>30</y>
        <width>100</width>
        <height>21</height>
       </rect>
@@ -179,17 +151,174 @@
       <string>Femenino</string>
      </property>
     </widget>
-    <widget class="QRadioButton" name="radioOtro">
+    <widget class="QRadioButton" name="radioButton_otro">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>70</y>
-       <width>100</width>
+       <x>210</x>
+       <y>30</y>
+       <width>61</width>
        <height>21</height>
       </rect>
      </property>
      <property name="text">
       <string>Otro</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QListWidget" name="listWidget_bienvenida">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>250</y>
+      <width>291</width>
+      <height>192</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_saludo">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>220</y>
+      <width>80</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Saludo</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>10</y>
+      <width>301</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Calculadora</string>
+    </property>
+    <widget class="QLineEdit" name="x">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="y">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>60</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>x:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>y:</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_suma">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>90</y>
+       <width>83</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Suma</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_resta">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>90</y>
+       <width>83</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Resta</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_multiplicacion">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>110</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Multiplicacion</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_division">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>110</y>
+       <width>83</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Division</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_calcular">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>140</y>
+       <width>80</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Calcular</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="listWidget_calcular">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>170</y>
+       <width>261</width>
+       <height>241</height>
+      </rect>
      </property>
     </widget>
    </widget>

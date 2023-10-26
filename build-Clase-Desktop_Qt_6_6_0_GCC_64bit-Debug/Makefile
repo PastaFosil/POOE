@@ -191,7 +191,6 @@ DIST          = /opt/Qt/6.6.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt/6.6.0/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/Qt/6.6.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/Qt/6.6.0/gcc_64/mkspecs/features/spec_post.prf \
-		../Clase/.qmake.stash \
 		/opt/Qt/6.6.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/Qt/6.6.0/gcc_64/mkspecs/features/toolchain.prf \
 		/opt/Qt/6.6.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -360,7 +359,6 @@ Makefile: ../Clase/Clase.pro /opt/Qt/6.6.0/gcc_64/mkspecs/linux-g++/qmake.conf /
 		/opt/Qt/6.6.0/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/Qt/6.6.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/Qt/6.6.0/gcc_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/opt/Qt/6.6.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/Qt/6.6.0/gcc_64/mkspecs/features/toolchain.prf \
 		/opt/Qt/6.6.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -521,7 +519,6 @@ Makefile: ../Clase/Clase.pro /opt/Qt/6.6.0/gcc_64/mkspecs/linux-g++/qmake.conf /
 /opt/Qt/6.6.0/gcc_64/mkspecs/features/qt_config.prf:
 /opt/Qt/6.6.0/gcc_64/mkspecs/linux-g++/qmake.conf:
 /opt/Qt/6.6.0/gcc_64/mkspecs/features/spec_post.prf:
-.qmake.stash:
 /opt/Qt/6.6.0/gcc_64/mkspecs/features/exclusive_builds.prf:
 /opt/Qt/6.6.0/gcc_64/mkspecs/features/toolchain.prf:
 /opt/Qt/6.6.0/gcc_64/mkspecs/features/default_pre.prf:
@@ -973,19 +970,7 @@ main.o: ../Clase/main.cpp ../Clase/mainwindow.h \
 		/opt/Qt/6.6.0/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt/6.6.0/gcc_64/include/QtGui/qinputmethod.h \
 		/opt/Qt/6.6.0/gcc_64/include/QtCore/qlocale.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtGui/qguiapplication_platform.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/QMessageBox \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qmessagebox.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qdialog.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/QFileDialog \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qfiledialog.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qdir.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qfile.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qfiledevice.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qfileinfo.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qdatetime.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qcalendar.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qtimezone.h
+		/opt/Qt/6.6.0/gcc_64/include/QtGui/qguiapplication_platform.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Clase/main.cpp
 
 mainwindow.o: ../Clase/mainwindow.cpp ../Clase/mainwindow.h \
@@ -1152,85 +1137,7 @@ mainwindow.o: ../Clase/mainwindow.cpp ../Clase/mainwindow.h \
 		/opt/Qt/6.6.0/gcc_64/include/QtGui/QTransform \
 		/opt/Qt/6.6.0/gcc_64/include/QtCore/qnativeinterface.h \
 		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qtabwidget.h \
-		ui_mainwindow.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/QVariant \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/QApplication \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qapplication.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qcoreapplication.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qeventloop.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qcoreapplication_platform.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qfuture.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qfutureinterface.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qmutex.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qdeadlinetimer.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qelapsedtimer.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qtsan_impl.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qresultstore.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qfuture_impl.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qthreadpool.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qthread.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qrunnable.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qexception.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qpromise.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtGui/qguiapplication.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtGui/qinputmethod.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qlocale.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtGui/qguiapplication_platform.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/QGroupBox \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qgroupbox.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qframe.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/QLabel \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qlabel.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtGui/qpicture.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtGui/qtextdocument.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/QLineEdit \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qlineedit.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtGui/qtextcursor.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtGui/qtextformat.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtGui/qpen.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtGui/qtextoption.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/QListWidget \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qlistwidget.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qlistview.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qabstractitemmodel.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qstyleoption.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtGui/qvalidator.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qregularexpression.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qslider.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qabstractslider.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qstyle.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qtabbar.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qrubberband.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/QMenuBar \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qmenubar.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qmenu.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/QPushButton \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qpushbutton.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/QStatusBar \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qstatusbar.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/QToolButton \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qtoolbutton.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/QWidget \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/QMessageBox \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qmessagebox.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qdialog.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/QFileDialog \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qfiledialog.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qdir.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qfile.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qfiledevice.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qfileinfo.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qdatetime.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qcalendar.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtCore/qtimezone.h \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/QInputDialog \
-		/opt/Qt/6.6.0/gcc_64/include/QtWidgets/qinputdialog.h
+		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../Clase/mainwindow.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
