@@ -95,7 +95,129 @@ private:
     Ui::MainWindow *ui;
 };
 
-class Calculadora
+class Operadores {
+    protected:
+    double suma(double c1, double c2)
+    {
+        return c1+c2;
+    }
+    double multiplicacion(double c1, double c2)
+    {
+        return c1*c2;
+    }
+    double resta(double c1, double c2)
+    {
+        return c1-c2;
+    }
+    double division(double c1, double c2)
+    {
+        return c1/c2;
+    }
+    double factorial(double c1)
+    {
+        if(c1 == 0)
+        {
+            return 1;
+        }
+        else
+        {
+            return c1*factorial(c1-1);
+        }
+
+    }
+    double tangente(double numero)
+    {
+        double d = (numero*3.1415)/180;
+        return tan(d);
+    }
+    double coseno(double numero)
+    {
+        double d = (numero*3.1415)/180;
+        return cos(d);
+    }
+    double seno(double numero)
+    {
+
+        double d = (numero*3.1415)/180;
+        return sin(d);
+    }
+    double inv_tangente(double numero)
+    {
+        double d = (numero*3.1415)/180;
+        return atan(d);
+
+    }
+    double inv_seno(double numero)
+    {
+        double d = (numero*3.1415)/180;
+        return asin(d);
+
+    }
+    double inv_coseno(double numero)
+    {
+        double d = (numero*3.1415)/180;
+        return acos(d);
+    }
+
+    double expo_cuadra(double c1)
+    {
+        return c1*c1;
+    }
+    double expo_3(double c1)
+    {
+        return c1*c1*c1;
+    }
+    double expo_n(double c1, double c2)
+    {
+        if(c2 == 0)
+        {
+            return 1;
+        }
+        else
+        {
+            double expo = 1;
+            for(int i=1; c2>= i ; i++)
+            {
+                expo *= c1;
+            }
+            return expo;
+        }
+    }
+    double Raiz(double c1)
+    {
+        if(c1 == 0)
+        {
+            cout << "Error valor indeterminado";
+        }
+        else if(c1 > 0)
+        {
+            return sqrt(c1);
+        }
+        else if(c1 < 0)
+        {
+            cout << endl << "Error, numero erroneo";
+        }
+    }
+    double exp(double c1)
+    {
+        double guar = 1;
+        for(int i=0; i<c1; i++)
+        {
+            guar *= 2.7182;
+        }
+        return guar;
+    }
+    double absoluto(double c)
+    {
+        return abs(c);
+    }
+    double Ln(double c)
+    {
+        return log(c);
+    }
+};
+
+class Calculadora : public Operadores
 {
     public:
 
@@ -110,125 +232,6 @@ class Calculadora
             return to_string(resultado);
         }
     private:
-
-        double suma(double c1, double c2)
-        {
-            return c1+c2;
-        }
-        double multiplicacion(double c1, double c2)
-        {
-            return c1*c2;
-        }
-        double resta(double c1, double c2)
-        {
-            return c1-c2;
-        }
-        double division(double c1, double c2)
-        {
-            return c1/c2;
-        }
-        double factorial(double c1)
-        {
-            if(c1 == 0)
-            {
-                return 1;
-            }
-            else
-            {
-                return c1*factorial(c1-1);
-            }
-
-        }
-        double tangente(double numero)
-        {
-            double d = (numero*3.1415)/180;
-            double c = tan(d);
-            return (c*180)/3.141592;
-        }
-        double coseno(double numero)
-        {
-            double d = (numero*3.1415)/180;
-            double c = cos(d);
-            return (c*180)/3.141592;
-        }
-        double seno(double numero)
-        {
-
-            double d = (numero*3.1415)/180;
-            double c = sin(d);
-            return (c*180)/3.141592;
-        }
-        double inv_tangente(double numero)
-        {
-            double d = (numero*3.1415)/180;
-            double c = atan(d);
-            return (c*180)/3.141592;
-
-        }
-        double inv_seno(double numero)
-        {
-            double d = (numero*3.1415)/180;
-            double c = asin(d);
-            return (c*180)/3.141592;
-
-        }
-        double inv_coseno(double numero)
-        {
-            double d = (numero*3.1415)/180;
-            double c = acos(d);
-            return (c*180)/3.141592;
-        }
-
-        double expo_cuadra(double c1)
-        {
-            return c1*c1;
-        }
-        double expo_3(double c1)
-        {
-            return c1*c1*c1;
-        }
-        double expo_n(double c1, double c2)
-        {
-            if(c2 == 0)
-            {
-                return 1;
-            }
-            else
-            {
-                double expo = 1;
-                for(int i=1; c2>= i ; i++)
-                {
-                    expo *= c1;
-                }
-                return expo;
-            }
-        }
-        double Raiz(double c1)
-        {
-            if(c1 == 0)
-            {
-                cout << "Error valor indeterminado";
-            }
-            else if(c1 > 0)
-            {
-                return sqrt(c1);
-            }
-            else if(c1 < 0)
-            {
-                cout << endl << "Error, numero erroneo";
-            }
-        }
-        double N_inverso(double c1)
-        {
-            if(c1 == 0)
-            {
-                cout << "Error, No se puede realizar esta operacion.";
-            }
-            else
-            {
-                return 1/c1;
-            }
-        }
 
         bool esOperador(char c) { // revisa si el caracter es un operador
             return (c == '+' || c == '-' || c == '*' || c == '/' || c == '^');
@@ -398,18 +401,22 @@ class Calculadora
                 return 'c';
             else if (function == "tan")
                 return 'd';
-            else if (function == "asin")
+            else if (function == "asn")
                 return 'f';
-            else if (function == "acos")
+            else if (function == "acs")
                 return 'g';
-            else if (function == "atan")
+            else if (function == "atn")
                 return 'h';
-            else if (function == "log")
+            else if (function == "lgb")
                 return 'j';
             else if (function == "exp")
                 return 'k';
-            else if (function == "|") // Raiz Cuadrada
-                return 'l';
+            else if (function == "log")
+                return 'x';
+            else if (function == "abs")
+                return 'e';
+            else if (function == "lgn")
+                return 'u';
         }
 
         string performOperation(string expression) { // evalua las expresiones unarias (sin, cos, exp, log, etc.)
@@ -448,11 +455,17 @@ class Calculadora
                 case 'h':
                     return to_string(inv_tangente(argument_result));
                 case 'j':
-                    return to_string(log(argument_result));
+                    return to_string(log10(argument_result));
                 case 'k':
-                    return to_string(expo_cuadra(argument_result));
-                case 'l':
-                    return to_string(Raiz(argument_result));
+                    return to_string(exp(argument_result));
+                case 'x':
+                    return to_string(Radianes(argument_result));
+                case 'q':
+                    return to_string(Grados(argument_result));
+                case 'e':
+                    return to_string(absoluto(argument_result));
+                case 'u':
+                    return to_string(Ln(argument_result));
                 }
             }
             else {

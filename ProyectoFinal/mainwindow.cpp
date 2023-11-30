@@ -4,7 +4,8 @@
 #include <iostream>
 #include <string>
 
-double ANS;
+string ANS;
+int counter = 0;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -55,10 +56,10 @@ void MainWindow::on_pb12_clicked()
 
 void MainWindow::on_pb13_clicked()
 {
-    ui->pb21->setText("");
+    ui->pb21->setText("pi");
     ui->pb22->setText("x³");
     ui->pb25->setText("abs");
-    ui->pb26->setText("log_");
+    ui->pb26->setText("lgb");
     ui->pb31->setText("div");
     ui->pb32->setText("sqrt");
     ui->pb33->setText("x²");
@@ -98,32 +99,55 @@ void MainWindow::on_pb13_clicked()
 }
 void MainWindow::on_pb15_clicked()
 {
-    ui->display->setText("NaN");
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
+    QString strn = ui->display->text();
+    ui->display->setText(strn + "abs(");
 }
 void MainWindow::on_pb16_clicked()
 {
-    ui->display->setText("NaN");
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
+    QString strn = ui->display->text();
+    ui->display->setText(strn + "lgb(");
 }
 
 
 void MainWindow::on_pb21_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
-    ui->display->setText("NaN");
+    ui->display->setText(strn + "3.14159");
 }
 void MainWindow::on_pb22_clicked()
 {
+    if (counter > 0) {
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn + "^3");
 
 }
 void MainWindow::on_pb25_clicked()
 {
+    if (counter > 0) {
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"abs(");
 }
 void MainWindow::on_pb26_clicked()
 {
+    if (counter > 0) {
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"lgb(");
 }
@@ -132,33 +156,53 @@ void MainWindow::on_pb26_clicked()
 
 void MainWindow::on_pb31_clicked()
 {
+    if (counter > 0) {
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText("NaN");
 }
 void MainWindow::on_pb32_clicked()
 {
+    if (counter > 0) {
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"^(1/2)");
 }
 void MainWindow::on_pb33_clicked()
 {
+    if (counter > 0) {
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"^2");
 }
 void MainWindow::on_pb34_clicked()
 {
+    if (counter > 0) {
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"^");
 }
 void MainWindow::on_pb35_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"log(");
 }
 void MainWindow::on_pb36_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
-    ui->display->setText(strn+"ln(");
+    ui->display->setText(strn+"lgn(");
 }
 
 
@@ -166,31 +210,54 @@ void MainWindow::on_pb36_clicked()
 
 void MainWindow::on_pb41_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"(");
 }
 void MainWindow::on_pb42_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+")");
 }
 void MainWindow::on_pb43_clicked()
 {
+    if (counter > 0) {
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"^(-1)");
 }
 void MainWindow::on_pb44_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"sin(");
 }
 void MainWindow::on_pb45_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"cos(");
 }
 void MainWindow::on_pb46_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"tan(");
 }
@@ -199,31 +266,53 @@ void MainWindow::on_pb46_clicked()
 
 void MainWindow::on_pb51_clicked()
 {
+    if (counter > 0) {
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"!");
 }
 void MainWindow::on_pb52_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"exp(");
 }
 void MainWindow::on_pb53_clicked()
 {
+    if (counter > 0) {
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"10^");
 }
 void MainWindow::on_pb54_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"asn(");
 }
 void MainWindow::on_pb55_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"acs(");
 }
 void MainWindow::on_pb56_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"atn(");
 }
@@ -233,21 +322,37 @@ void MainWindow::on_pb56_clicked()
 
 void MainWindow::on_pb61_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"7");
 }
 void MainWindow::on_pb62_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"8");
 }
 void MainWindow::on_pb63_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"9");
 }
 void MainWindow::on_pb64_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     string str = strn.toStdString();
     str = str.substr(0,str.length()-1);
@@ -255,6 +360,9 @@ void MainWindow::on_pb64_clicked()
 }
 void MainWindow::on_pb65_clicked()
 {
+    if (counter > 0) {
+        counter = 0;
+    }
     ui->display->setText("");
 }
 
@@ -263,26 +371,44 @@ void MainWindow::on_pb65_clicked()
 
 void MainWindow::on_pb71_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"4");
 }
 void MainWindow::on_pb72_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"5");
 }
 void MainWindow::on_pb73_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"6");
 }
 void MainWindow::on_pb74_clicked()
 {
+    if (counter > 0) {
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"*");
 }
 void MainWindow::on_pb75_clicked()
 {
+    if (counter > 0) {
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"/");
 }
@@ -292,27 +418,44 @@ void MainWindow::on_pb75_clicked()
 
 void MainWindow::on_pb81_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"1");
 }
 void MainWindow::on_pb82_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"2");
 }
 void MainWindow::on_pb83_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"3");
 }
 void MainWindow::on_pb84_clicked()
 {
+    if (counter > 0) {
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn + "+");
-    QString strn2 = ui->display->text();
 }
 void MainWindow::on_pb85_clicked()
 {
+    if (counter > 0) {
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn+"-");
 }
@@ -322,6 +465,10 @@ void MainWindow::on_pb85_clicked()
 
 void MainWindow::on_pb91_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
     ui->display->setText(strn + "0");
 }
@@ -337,15 +484,23 @@ void MainWindow::on_pb93_clicked()
 }
 void MainWindow::on_pb94_clicked()
 {
+    if (counter > 0) {
+        ui->display->setText("");
+        counter = 0;
+    }
     QString strn = ui->display->text();
-    ui->display->setText(strn+"ANS");
+    ui->display->setText(strn+QString::fromStdString(ANS));
 }
 void MainWindow::on_pb95_clicked()
 {
+    counter += 1;
+
     Calculadora calc;
     QString strn = ui->display->text();
     string input = strn.toStdString();
     string result = calc.calcularExpresion(input);
     ui->display->setText(QString::fromStdString(result));
+
+    ANS = result;
 }
 

@@ -12,7 +12,6 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -68,7 +67,6 @@ public:
     QPushButton *pb95;
     QPushButton *pb81;
     QPushButton *pb85;
-    QListWidget *listWidget;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -76,7 +74,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(641, 540);
+        MainWindow->resize(331, 532);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         display = new QLineEdit(centralwidget);
@@ -208,13 +206,10 @@ public:
         pb85 = new QPushButton(centralwidget);
         pb85->setObjectName("pb85");
         pb85->setGeometry(QRect(260, 410, 51, 31));
-        listWidget = new QListWidget(centralwidget);
-        listWidget->setObjectName("listWidget");
-        listWidget->setGeometry(QRect(360, 40, 256, 192));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 641, 20));
+        menubar->setGeometry(QRect(0, 0, 331, 20));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -228,7 +223,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        pb21->setText(QString());
+        pb21->setText(QCoreApplication::translate("MainWindow", "pi", nullptr));
         pb22->setText(QCoreApplication::translate("MainWindow", "x\302\263", nullptr));
         pb25->setText(QCoreApplication::translate("MainWindow", "abs", nullptr));
         pb26->setText(QCoreApplication::translate("MainWindow", "log_", nullptr));

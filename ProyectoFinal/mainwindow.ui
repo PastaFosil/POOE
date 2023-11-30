@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>641</width>
-    <height>540</height>
+    <width>331</width>
+    <height>532</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -34,7 +34,7 @@
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>pi</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pb22">
@@ -570,23 +570,13 @@
      <string>-</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="listWidget">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>40</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>641</width>
+     <width>331</width>
      <height>20</height>
     </rect>
    </property>
