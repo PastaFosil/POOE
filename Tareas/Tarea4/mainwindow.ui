@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>550</width>
+    <height>499</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>541</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>80</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cuerpo 1</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_P1">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>100</y>
+       <width>79</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Seleccione un cuerpo:</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Sol</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Mercurio</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Venus</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tierra</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Marte</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Jupiter</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Saturno</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Urano</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Neptuno</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Otro</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>20</y>
+       <width>381</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>23</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Calculo órbital con kepler</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>80</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cuerpo 2</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_P2">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>100</y>
+       <width>79</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Seleccione un cuerpo:</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Sol</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Mercurio</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Venus</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tierra</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Marte</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Jupiter</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Saturno</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Urano</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Neptuno</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Otro</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>160</y>
+       <width>121</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>El periodo es de:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Resultado">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>110</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>17</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Calcular</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="listWidget">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>190</y>
+       <width>221</width>
+       <height>171</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_Masa1">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>221</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <widget class="QLineEdit" name="MOtro1">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>181</width>
+        <height>26</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ingrese la masa del 
+cuerpo celeste (kg)</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_Masa2">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>240</y>
+       <width>221</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ingrese la masa del segundo 
+cuerpo celeste (kg)</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="MOtro_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>191</width>
+        <height>26</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_Distancia">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>350</y>
+       <width>221</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <widget class="QLineEdit" name="lineEdit_Distancia">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>191</width>
+        <height>26</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ingrese la distancia 
+entre los cuerpos (km)</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>370</y>
+       <width>221</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>171</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Puede expresar la notacion 
+cientifica como XeY</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>550</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
